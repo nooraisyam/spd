@@ -6,12 +6,15 @@
     
 
     <!-- Page Content -->
+
     <section class="py-5">
       <div class="container">
        <form>
 
+<h1> Register New User </h1>
+
 <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+    <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
       <input name ="name" type="name" class="form-control" id="inputName3" placeholder="Name">
     </div>
@@ -26,9 +29,9 @@
 
   
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">IC Number</label>
+    <label for="inputIc3" class="col-sm-2 col-form-label">IC Number</label>
     <div class="col-sm-10">
-      <input name ="ic" type="ic" class="form-control" id="inputIc" placeholder="IC no without dash (-)">
+      <input name ="ic" type="ic" class="form-control" id="inputIc3" placeholder="IC No without dash (-)">
     </div>
   </div>
 
