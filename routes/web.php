@@ -18,5 +18,6 @@ Route::get('/','PortalController@home')->name('home');
 Route::get('/user','UserController@index');
 Route::get('/user/login','UserController@login')->name('user.login');
 Route::get('/user/register','UserController@register')->name('user.register');
+Route::post('/user/register','UserController@registerPost')->name('user.register.post');
 
 
