@@ -292,10 +292,10 @@
                             <a href="#"><i class="fa fa-copy fa-fw"></i> Sesi<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Senarai Sesi</a>
+                                    <a href="{{ route('sesi.index') }}">Senarai Sesi</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Tambah Tambah</a>
+                                    <a href="{{ route('sesi.create') }}">Tambah Sesi</a>
                                 </li>
                          </ul>
                         
