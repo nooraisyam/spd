@@ -26,8 +26,9 @@
          <tbody>
            @foreach($sesis as $sesi)
            <tr>
+            
              <td>{{ $sesi->id}}</td>
-             <td>{{ $sesi->name}}</td>
+             <td><a href="{{ route('sesi.show',$sesi->id) }}">{{ $sesi->name}}</a></td>
              <td>{{ $sesi->status ? 'Open' : 'Close'}}</td>
              <td>{{ $sesi->pingat}}</td>
              <td>{{ $sesi->created_at->format('d M Y') }}</td>

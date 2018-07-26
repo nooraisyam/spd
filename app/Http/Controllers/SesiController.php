@@ -66,7 +66,7 @@ class SesiController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('backend.sesi_show')->withSesi( Sesi::findOrFail($id) );
     }
 
     /**
