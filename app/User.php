@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //define relationship for 1 to many
+    public function calons(){
+        return $this->hasMany('App\Calon', 'user_id', 'id');
+    }
 }

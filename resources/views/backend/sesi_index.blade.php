@@ -35,6 +35,13 @@
              <td>{{ $sesi->updated_at->format('d M Y') }}</td>
              <td>
                <a href="{{ route('sesi.edit',$sesi->id) }}">Edit</a>
+               <form method="POST" action="{{ route('sesi.destroy',$sesi->id)}}"
+                style="display: inline;">
+                 @csrf
+                 @method('DELETE')
+                 <input type="submit" class="btn btn-link" value="Delete" 
+                 onclick="return confirm('Are You Sure?')">
+               </form>
              </td>
            </tr>
            @endforeach

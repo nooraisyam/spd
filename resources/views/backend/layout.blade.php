@@ -281,10 +281,10 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Pencalonan<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Senarai Calon</a>
+                                    <a href="{{ route('pencalonan.index') }}">Senarai Calon</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Tambah Pencalonan</a>
+                                    <a href="{{ route('pencalonan.create') }}">Tambah Pencalonan</a>
                                 </li>
 
                             </ul>

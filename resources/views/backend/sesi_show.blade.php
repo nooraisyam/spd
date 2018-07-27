@@ -19,7 +19,7 @@
   
         
         <p>Name : <strong>{{$sesi->name}}</strong></p>
-        <p>Status : <strong>{{$sesi->status}}</strong></p>
+        <p>Status : <strong>{{$sesi->status? 'Open' : 'Close'}}</strong></p>
         <p>Pingat : <strong>{{$sesi->pingat}}</strong></p></br>
 
         <p><a href="{{ url()->previous() }}">Back To Senarai</a></p>
