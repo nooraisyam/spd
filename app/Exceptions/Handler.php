@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Auth\AuthenticationException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -47,6 +48,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        //patah blik ke page main bila user cuba masuk page yang tidak dibenarkan
+        if ($exception instanceof HttpException && $exception->getStatusCode()==403){
+            return redirect()->route('user.dashboard')->withError('Access Denied.');
+        }
+
         return parent::render($request, $exception);      
     }
 

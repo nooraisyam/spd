@@ -213,8 +213,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         //tambahan
-        Zizaco\Entrust\EntrustFacade::class,
-
+        
+'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
     ],
 
 ];

@@ -29,8 +29,13 @@ Route::middleware(['auth'])->group(function(){
 	Route::get('/user','UserController@dashboard')->name('user.dashboard');
 	//Route::resource('sesi','SesiController');
 	
-	Route::resources([
-		'sesi' => 'SesiController',
-		'pencalonan' => 'PencalonanController',
-	]);
+		Route::resource('sesi', 'SesiController')->middleware('role:admin');
+		Route::resource('pencalonan', 'PencalonanController');
+
+
+
+	//Route::resources([
+		//'sesi' => 'SesiController',
+		//'pencalonan' => 'PencalonanController',
+	//])->middleware('role:admin');
 });

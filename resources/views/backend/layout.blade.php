@@ -31,6 +31,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<!--digunakan untuk define master css / js-->
+    @stack('css')
 </head>
 
 <body>
@@ -288,6 +290,7 @@
                                 </li>
 
                             </ul>
+                        @role('admin')
                            <li>
                             <a href="#"><i class="fa fa-copy fa-fw"></i> Sesi<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -297,6 +300,7 @@
                                 <li>
                                     <a href="{{ route('sesi.create') }}">Tambah Sesi</a>
                                 </li>
+                            @endrole
                          </ul>
                         
                         
@@ -328,6 +332,8 @@
    
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('backend/dist/js/sb-admin-2.js') }}"></script>
+
+    @stack('js')
 
 </body>
 
